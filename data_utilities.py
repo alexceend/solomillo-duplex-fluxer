@@ -23,11 +23,13 @@ class Data_utilities:
         os.remove("data/users_inventory.json.tmp")
 
     def update_balance(self, user_id, new_balance):
+        user_id = str(user_id)
         self.users_inventory[user_id]["money"] = new_balance
         self.save_users_inventory_data()
         self.load_users_inventory_data()
 
     def get_balance(self, user_id):
+        user_id = str(user_id)
         if(user_id in self.users_inventory.keys()):
             return self.users_inventory[user_id]["money"]
         else:
@@ -37,6 +39,7 @@ class Data_utilities:
             return 0
 
     def create_entry(self, user_id):
+        user_id = str(user_id)
         self.users_inventory[user_id] = {"money":0}
         self.save_users_inventory_data()
         self.load_users_inventory_data()
