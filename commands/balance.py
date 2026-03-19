@@ -2,7 +2,7 @@ import fluxer
 import random
 import asyncio
 from bot_manager import *
-import data_utilities
+from Data_utilities import data_utilities
 
 @bot.command(name="balance")
 async def run(ctx):

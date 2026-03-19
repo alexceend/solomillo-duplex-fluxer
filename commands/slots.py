@@ -2,7 +2,7 @@ import fluxer
 import random
 import asyncio
 from bot_manager import *
-import data_utilities
+from Data_utilities import data_utilities
 
 symbols = [" :bell: ", " :four_leaf_clover: ", " :seven: "]
 reaction_waits = {}
