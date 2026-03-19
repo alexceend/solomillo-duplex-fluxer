@@ -8,12 +8,14 @@ import commands.work
 import commands.balance
 import data_utilities
 
+import asyncio
+
 load_dotenv()
-data_utilities.load_users_inventory_data()
 
 @bot.event
 async def on_ready():
     print(f"Bot is ready! Logged in as {bot.user.username}")
+    data_utilities.load_users_inventory_data()
 
 @bot.command()
 async def ping(ctx):
