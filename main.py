@@ -16,7 +16,6 @@ load_dotenv()
 async def on_ready():
     print(f"Bot is ready! Logged in as {bot.user.username}")
     data_utilities.load_users_inventory_data()
-    print(f"on_ready finished {data_utilities.get_users_inventory()}")
 
 @bot.command()
 async def ping(ctx):
