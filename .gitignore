@@ -4,3 +4,5 @@
 venv
 /data/*
 data
+/__pycache__/
+/commands/__pycache__

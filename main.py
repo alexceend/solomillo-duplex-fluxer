@@ -1,0 +1,26 @@
+import fluxer
+import os
+from bot_manager import *
+from dotenv import load_dotenv
+from random import random, randint
+import commands.slots
+import commands.work
+import commands.balance
+import data_utilities
+
+load_dotenv()
+data_utilities.load_users_inventory_data()
+
+@bot.event
+async def on_ready():
+    print(f"Bot is ready! Logged in as {bot.user.username}")
+
+@bot.command()
+async def ping(ctx):
+    print(ctx)
+    await ctx.reply("Pong!")
+    #await ctx.send("Pong!")
+
+if __name__ == "__main__":
+    TOKEN = os.getenv('TOKEN_BOT')
+    bot.run(TOKEN)

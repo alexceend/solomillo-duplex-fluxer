@@ -1,0 +1,1 @@
+curl --request GET --url https://api.fluxer.app/v1/.well-known/fluxer > api_response.json

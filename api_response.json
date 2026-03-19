@@ -1,0 +1,87 @@
+{
+    "api_code_version": 1,
+    "app_public": {
+        "sentry_dsn": "https://59ced0e2666ab83dd1ddb056cdd22d1b@o4510149383094272.ingest.us.sentry.io/4510205815291904"
+    },
+    "captcha": {
+        "hcaptcha_site_key": "9cbad400-df84-4e0c-bda6-e65000be78aa",
+        "provider": "turnstile",
+        "turnstile_site_key": "0x4AAAAAAB_lAoDdTWznNHMq"
+    },
+    "endpoints": {
+        "admin": "https://admin.fluxer.app",
+        "api": "https://web.fluxer.app/api",
+        "api_client": "https://web.fluxer.app/api",
+        "api_public": "https://api.fluxer.app",
+        "gateway": "wss://gateway.fluxer.app",
+        "gift": "https://fluxer.gift",
+        "invite": "https://fluxer.gg",
+        "marketing": "https://fluxer.app",
+        "media": "https://fluxerusercontent.com",
+        "static_cdn": "https://fluxerstatic.com",
+        "webapp": "https://web.fluxer.app"
+    },
+    "features": {
+        "presigned_attachment_uploads": true,
+        "self_hosted": false,
+        "sms_mfa_enabled": true,
+        "stripe_enabled": true,
+        "voice_enabled": true
+    },
+    "gateway": {
+        "session_retry_jitter_ms": 5500,
+        "session_retry_max_ms": 30000,
+        "session_retry_min_ms": 10000
+    },
+    "gif": {
+        "provider": "tenor"
+    },
+    "limits": {
+        "defaultsHash": "cgdiuz",
+        "rules": [
+            {
+                "filters": {
+                    "traits": [
+                        "premium"
+                    ]
+                },
+                "id": "premium",
+                "overrides": {
+                    "feature_animated_avatar": 1,
+                    "feature_animated_banner": 1,
+                    "feature_custom_discriminator": 1,
+                    "feature_early_access": 1,
+                    "feature_global_expressions": 1,
+                    "feature_higher_video_quality": 1,
+                    "feature_per_guild_profiles": 1,
+                    "feature_voice_entrance_sounds": 1,
+                    "max_attachment_file_size": 524288000,
+                    "max_bookmarks": 300,
+                    "max_created_packs": 50,
+                    "max_custom_backgrounds": 15,
+                    "max_favorite_memes": 500,
+                    "max_guilds": 200,
+                    "max_installed_packs": 50,
+                    "max_message_length": 4000
+                }
+            },
+            {
+                "id": "default",
+                "overrides": {}
+            }
+        ],
+        "traitDefinitions": [
+            "premium"
+        ],
+        "version": 2
+    },
+    "push": {
+        "public_vapid_key": "BEIwQxIwfj6m90tLYAR0AU_GJWU4kw8J_zJcHQG55NCUWSyRy-dzMOgvxk8yEDwdVyJZa6xUL4fmwngijq8T2pY"
+    },
+    "sso": {
+        "display_name": null,
+        "enabled": false,
+        "enforced": false,
+        "redirect_uri": "https://web.fluxer.app/auth/sso/callback"
+    }
+}
