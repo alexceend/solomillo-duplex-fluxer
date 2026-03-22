@@ -22,7 +22,7 @@ async def run(ctx):
 
 
 def can_work(last_work):
-    return datetime.now() - 
+    return datetime.now()
 
 def get_work():
     #print(datetime.now().total_seconds())
