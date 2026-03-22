@@ -50,7 +50,7 @@ async def on_raw_reaction_add(event):
             wait_event.set()
 
 def won(result):
-    raw = result.strip()
+    raw = result.strip(" |").split()
     return raw[1] == raw[2] == raw[3]
 
 def get_shot():

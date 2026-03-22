@@ -38,9 +38,19 @@ class Data_utilities:
             self.save_users_inventory_data()
             return 0
 
+    def get_last_work(self, user_id):
+        user_id = str(user_id)
+        if(user_id in self.users_inventory.keys()):
+            return self.users_inventory[user_id]["last_work"]
+        else:
+            print(f"Creating entry for user with id {user_id}")
+            self.create_entry(user_id)
+            self.save_users_inventory_data()
+            return -1
+
     def create_entry(self, user_id):
         user_id = str(user_id)
-        self.users_inventory[user_id] = {"money":0}
+        self.users_inventory[user_id] = {"money":0, "last_work":-1}
         self.save_users_inventory_data()
         self.load_users_inventory_data()
 
